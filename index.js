@@ -9,13 +9,12 @@ const output = require("./output");
     Valid options are:
     fatal, error, warn, info, detail, debug, and trace
 */
-Realm.Sync.setLogLevel("error");
 
 const realms = {};
 
 async function openRealm(partitionKey) {
   const config = {
-    schema: [schemas.TaskSchema, schemas.UserSchema, schemas.ProjectSchema],
+    // schema: [schemas.TaskSchema, schemas.UserSchema, schemas.ProjectSchema],
     sync: {
       user: users.getAuthedUser(),
       partitionValue: partitionKey,
