@@ -4,7 +4,6 @@ const users = require("./users");
 const schemas = require("./schemas");
 const output = require("./output");
 
-
 const realms = {};
 
 async function openRealm(partitionKey) {
