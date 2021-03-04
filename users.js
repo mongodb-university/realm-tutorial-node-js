@@ -38,11 +38,11 @@ async function logIn() {
   ]);
 
   try {
-     // TODO: create new emailPassword credentials and assign it to ``credentials``
+    // TODO: create new emailPassword credentials and assign it to ``credentials``
     const credentials;
 
-     // TODO: call the app.logIn() method and assign its value to ``user``
-    const user; 
+    // TODO: call the app.logIn() method and assign its value to ``user``
+    const user;
 
     if (user) {
       output.result("You have successfully logged in as " + app.currentUser.id);
@@ -109,9 +109,7 @@ function getAuthedUser() {
   return app.currentUser;
 }
 
-
 exports.getAuthedUser = getAuthedUser;
 exports.logIn = logIn;
 exports.logOut = logOut;
 exports.registerUser = registerUser;
-

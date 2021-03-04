@@ -7,7 +7,7 @@ const users = require("./users");
 
 exports.getTasks = async (partition) => {
   const realm = await index.getRealm(partition);
-   //TODO: Call the objects() method and pass in the name of the collection.
+  //TODO: Call the objects() method and pass in the name of the collection.
 
   output.header("MY TASKS:");
   output.result(JSON.stringify(tasks, null, 2));
@@ -23,7 +23,7 @@ exports.getTask = async (partition) => {
         message: "What is the task ID (_id)?",
       },
     ]);
-     //TODO: Call the objectForPrimaryKey() method to get a task by its ID. 
+    //TODO: Call the objectForPrimaryKey() method to get a task by its ID.
 
     if (result !== undefined) {
       output.header("Here is the task you requested:");
@@ -56,7 +56,7 @@ exports.createTask = async (partition) => {
     ]);
     let result;
     realm.write(() => {
-       //TODO: Call the create() Realm function and pass in all of the required properties.
+      //TODO: Call the create() Realm function and pass in all of the required properties.
 
     });
 
@@ -84,10 +84,10 @@ exports.deleteTask = async (partition) => {
   ]);
 
   if (answers.confirm) {
-     //TODO: Call the objectForPrimaryKey() method to get a task by its ID and assign it to task.
+    //TODO: Call the objectForPrimaryKey() method to get a task by its ID and assign it to task.
     let task;
     realm.write(() => {
-       //TODO: Call the delete() function.
+      //TODO: Call the delete() function.
 
       output.result("Task deleted.");
     });
@@ -149,8 +149,8 @@ async function modifyTask(answers, partition) {
   let task;
   try {
     realm.write(() => {
-       //TODO: Call the objectForPrimaryKey() method to get the task by ID and
-       //change the task object's status. 
+      //TODO: Call the objectForPrimaryKey() method to get the task by ID and
+      //change the task object's status.
     });
     return JSON.stringify(task, null, 2);
   } catch (err) {

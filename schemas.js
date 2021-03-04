@@ -1,15 +1,15 @@
 const TaskSchema = {
-   // TODO: Define the data model for tasks.
+  // TODO: Define the data model for tasks.
 
 };
 
 const UserSchema = {
-   // TODO: Define the data model for users.
+  // TODO: Define the data model for users.
 
 };
 
 const ProjectSchema = {
-   // TODO: Define the data model for users.
+  // TODO: Define the data model for users.
 
 };
 
