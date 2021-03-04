@@ -109,9 +109,7 @@ function getAuthedUser() {
   return app.currentUser;
 }
 
-
 exports.getAuthedUser = getAuthedUser;
 exports.logIn = logIn;
 exports.logOut = logOut;
 exports.registerUser = registerUser;
-
