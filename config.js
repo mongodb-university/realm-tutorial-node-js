@@ -1,1 +1,1 @@
-exports.realmAppId = "TODO";
+exports.realmAppId = "<your Realm app ID here>";
