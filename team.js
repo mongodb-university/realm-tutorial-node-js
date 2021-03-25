@@ -10,7 +10,7 @@ exports.getTeamMembers = async () => {
 
     output.result(JSON.stringify(teamMembers, null, 2));
   } catch (err) {
-    output.error(JSON.stringify(err));
+    output.error(err.message);
   }
 };
 
@@ -51,6 +51,6 @@ exports.removeTeamMember = async () => {
 
     output.result("The user was removed from your team.");
   } catch (err) {
-    output.error(JSON.stringify(err));
+    output.error(err.message);
   }
 };

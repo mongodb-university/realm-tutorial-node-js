@@ -14,7 +14,7 @@ async function openRealm(partitionKey) {
       partitionValue: partitionKey,
     },
   };
-  //TODO: open a realm with these configuration settings.
+  // TODO: open a realm with these configuration settings.
 }
 
 output.intro();
@@ -47,8 +47,7 @@ run().catch((err) => {
 
 async function getRealm(partitionKey) {
   if (realms[partitionKey] == undefined) {
-    //TODO: Call the openRealm() function with the partition key parameter.
-
+    // TODO: Call the openRealm() function with the partition key parameter.
   }
   return realms[partitionKey];
 }

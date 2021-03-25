@@ -9,7 +9,7 @@ const UserSchema = {
 };
 
 const ProjectSchema = {
-  // TODO: Define the data model for users.
+  // TODO: Define the data model for projects.
 
 };
 
