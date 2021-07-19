@@ -2,7 +2,6 @@ const TaskSchema = {
   name: "Task",
   properties: {
     _id: "objectId",
-    _partition: "string",
     name: "string",
     owner: "string?",
     status: "string",
@@ -14,7 +13,6 @@ const UserSchema = {
   name: "User",
   properties: {
     _id: "string",
-    _partition: "string",
     memberOf: "Project[]",
     name: "string",
   },
