@@ -11,6 +11,7 @@ const appConfig = {
   timeout: 10000,
 };
 
+// :code-block-start: newRealmApp
 const app = new Realm.App(appConfig);
 /*  Change the logLevel to increase or decrease the
     amount of messages you see in the console.
@@ -19,7 +20,9 @@ const app = new Realm.App(appConfig);
 */
 Realm.App.Sync.setLogLevel(app, "error");
 
+// :code-block-end:
 
+// :code-block-start: userLogin
 async function logIn() {
   const input = await inquirer.prompt([
     {
@@ -36,12 +39,23 @@ async function logIn() {
   ]);
 
   try {
-    // TODO: create new emailPassword credentials and assign it to ``credentials``
-    const credentials;
+    // :state-start: final
+    const credentials = Realm.Credentials.emailPassword(
+      input.email,
+      input.password
+    );
+    // :state-end: :state-uncomment-start: start
+    // // TODO: create new emailPassword credentials and assign it to ``credentials``
+    //const credentials;
+    // :state-uncomment-end:
 
-    // TODO: call the app.logIn() method and assign its value to ``user``
-    const user;
+    // :state-start: final
+    const user = await app.logIn(credentials);
+    // :state-end: :state-uncomment-start: start
+    // // TODO: call the app.logIn() method and assign its value to ``user``
+    //const user;
 
+    // :state-uncomment-end:
     if (user) {
       output.result("You have successfully logged in as " + app.currentUser.id);
       return main.mainMenu();
@@ -54,6 +68,7 @@ async function logIn() {
     return logIn();
   }
 }
+// :code-block-end:
 
 async function registerUser() {
   output.header("WELCOME, NEW USER");
