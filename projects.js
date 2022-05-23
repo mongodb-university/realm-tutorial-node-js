@@ -8,7 +8,9 @@ const main = require("./main");
 const tasks = require("./tasks");
 const manageTeam = require("./manageTeam");
 
+// :code-block-start: getProjects
 async function getProjects() {
+  // :state-start: final
   const user = users.getAuthedUser();
   try {
     const { memberOf: projects } = await user.refreshCustomData();
@@ -23,7 +25,14 @@ async function getProjects() {
     output.error(err);
     output.error("There was a problem accessing custom user data.");
   }
+  // :state-end: :state-uncomment-start: start
+  // // TODO: Call the refreshCustomData() method to get the user's available
+  // projects from custom user data.
+  //
+  // return projects;
+  // :state-uncomment-end:
 }
+// :code-block-end:
 
 exports.showProjects = async () => {
   const projects = await getProjects();
